@@ -1,11 +1,28 @@
 const myLibrary = [];
+const newBook = document.querySelector('.new-book')
+const dialog = document.querySelector('dialog')
+const closeButton = document.querySelector('.close')
+const submitButton = document.querySelector('button[type="submit"]')
 
 theHobbit = new Book("The Hobbit", "J.R.R Tolkein", 295, false)
 myLibrary.push(theHobbit);
-harryPotter =new Book('Harry Potter', "J.K. Rowling", 300, true);
+harryPotter =new Book('Harry Potter', "J.K. Rowling", 400, true);
 myLibrary.push(harryPotter)
 
 displayBooks();
+
+newBook.addEventListener('click', () => {
+    dialog.showModal();
+})
+
+closeButton.addEventListener('click', () => {
+    dialog.close();
+})
+
+submitButton.addEventListener('click', () => {
+    
+    event.preventDefault()
+})
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -28,13 +45,18 @@ function displayBooks() {
         book.classList.add('book')
         let randomColor = Math.floor(Math.random()*16777215).toString(16);
         book.style.backgroundColor = '#' + randomColor;
+        let height = myLibrary[i].pages / 6
+        book.style.height = height + 'px'
+        if (myLibrary[i].read === true) {
+            book.style.border = '3px solid lightgreen';
+        }
         book.appendChild(title)
         book.appendChild(author)
         library.appendChild(book)
     }
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(book) {
     //
 }
 

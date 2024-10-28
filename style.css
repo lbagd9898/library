@@ -4,15 +4,42 @@
     justify-content: center;
     align-items: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    gap: 1em;
 }
 
 .book {
     height: 2em;
     width: 20em;
-    border: solid 1px black;
+    border: solid 3px red;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding:  0em 1em;
+    color: white;
 }
+
+.new-book {
+    background-color: blue;
+    border: none;
+    padding: 1em 2em;
+    color: white;
+    font: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.new-book:hover {
+    cursor: pointer;
+}
+
+dialog {
+    width: 40%;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+

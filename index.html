@@ -9,9 +9,33 @@
 <body>
     <div class="container">
         <h2>Library</h2>
+        <button class="new-book">New Book</button>
         <div class="books">
         </div>
     </div>
+    <dialog>
+        <p>Add a new book!</p>
+        <form action="example.path" method="post">
+            <div>
+            <label for="name">Book Name</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author">
+            </div>
+            <div>
+            <label for="pages">Pages</label>
+            <input type="number" name="pages" id="pages">
+            </div>
+            <div>
+            <label for="read">Read</label>
+            <input type="checkbox" id="read" name="read" value="Read">
+            </div>
+            <button type="submit">Add Book</button>
+        </form>
+        <button class="close">Close</button>
+    </dialog>
     <script src="/javascript.js"></script>
 </body>
 </html>
