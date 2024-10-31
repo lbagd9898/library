@@ -19,6 +19,14 @@
     color: white;
 }
 
+.book button {
+    font-family: cursive;
+    font-size: 14px;
+    padding:  .3rem .6rem;
+    border: none;
+    border-radius: 5px;
+}
+
 .new-book {
     background-color: blue;
     border: none;
@@ -29,17 +37,21 @@
     border-radius: 5px;
 }
 
-.new-book:hover {
+button:hover {
     cursor: pointer;
 }
 
 dialog {
-    width: 40%;
+    width: max(40%, 400px);
 }
 
 form div {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+form button {
     margin-bottom: 1em;
 }
 
